@@ -1,4 +1,4 @@
-"use client"
+import { Footer } from "./Footer";
 import { Navbar } from "./Nabar";
 
 interface Props {
@@ -9,7 +9,10 @@ const Layout = ({ children }: Props) => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            {children}
+            <div className="flex-1">
+                {children}
+            </div>
+            <Footer />
         </div>
     )
 }
